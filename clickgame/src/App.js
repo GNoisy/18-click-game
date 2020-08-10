@@ -1,14 +1,14 @@
 import React from "react";
 import Navbar from "./components/Navbar";
 import Jumbotron from "./components/Jumbotron";
-import Card from "./components/CharCard";
+import CharCard from "./components/CharCard";
 
 function App() {
   return (
     <div>
       <Navbar />
       <Jumbotron />
-      <Card />
+      <CharCard />
     </div>
   );
 }

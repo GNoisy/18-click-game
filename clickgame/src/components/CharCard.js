@@ -1,6 +1,6 @@
 import React from "react";
 
-function Card() {
+function CharCard() {
   return (
     <div className="card">
       <div className="card-body">
@@ -10,4 +10,4 @@ function Card() {
   );
 }
 
-export default Card;
+export default CharCard;
