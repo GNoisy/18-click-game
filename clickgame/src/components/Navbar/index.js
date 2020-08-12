@@ -13,7 +13,7 @@ function Navbar() {
 
       <nav style={styles.navbarStyle} className="navbar sticky-top">
         <a className="navbar-brand" href="#"><span><h2>Bob's Burgers</h2></span></a>
-        <h2 className="text-white">Score: {props.score}</h2>
+        <h2 className="text-white">Score: 0</h2>
       </nav>
     );
 }
