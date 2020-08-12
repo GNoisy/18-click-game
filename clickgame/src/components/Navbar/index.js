@@ -12,8 +12,8 @@ function Navbar() {
     return (
 
       <nav style={styles.navbarStyle} className="navbar sticky-top">
-        <a className="navbar-brand" href="#"><span><h2>Bob's Burger</h2></span></a>
-        <h2 className="text-white">Score: <span>0</span></h2>
+        <a className="navbar-brand" href="#"><span><h2>Bob's Burgers</h2></span></a>
+        <h2 className="text-white">Score: {props.score}</h2>
       </nav>
     );
 }
