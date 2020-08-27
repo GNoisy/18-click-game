@@ -8,12 +8,16 @@ const styles = {
     }
 };
 
-function Navbar() {
+function Navbar(props) {
+    const { displayText, score } = props; 
+    
+
     return (
 
       <nav style={styles.navbarStyle} className="navbar sticky-top">
         <a className="navbar-brand" href="#"><span><h2>Bob's Burgers</h2></span></a>
-        <h2 className="text-white">Score: 0</h2>
+        <h2 className="text-white">{displayText}</h2>
+        <h2 className="text-white">Score: {score}</h2>
       </nav>
     );
 }

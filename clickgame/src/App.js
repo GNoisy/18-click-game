@@ -58,30 +58,32 @@ class App extends React.Component {
     images: images,
     clickedImages: [],
     score: 0,
-    clickedOn: false
+    displayText: ''
   }
   checkImage = (imageId) => {
     // check if the image has been click already
     // shuffle the images after
+   
     const clickedImages = this.state.clickedImages;
     if (clickedImages.indexOf(imageId) !== -1) {
       // the image has already been clicked
       // alert the user
       this.setState({
-        clickedOn: true
-      });
-      setTimeout(() => {
-        this.setState({
-          clickedOn: false
-        })
-      }, 2000);
+        displayText: 'You guessed incorrectly',
+        score: 0,
+        clickedImages: []
+      })
     }
     else {
       // the image has not been clicked on
       // add the image to clickedImages
+      const newClickedImage = [...clickedImages, imageId]
       this.setState({
-        score: this.state.score + 1
+        score: this.state.score + 1,
+        clickedImages: newClickedImage,
+        displayText: 'You guessed correctly'
       })
+      
     }
     this.setState({
       images: images.sort((image) => {
@@ -102,20 +104,23 @@ class App extends React.Component {
         clickedImages: [],
       });
     }
+    setTimeout(() => {
+      this.setState({
+        displayText: ''
+      })
+    }, 2000);
   }
   render() {
     return (
       <div>
-        <Navbar score={this.state.score}/>
+        <Navbar score={this.state.score} displayText={this.state.displayText} />
         <Jumbotron />
         <Wrapper>
-          <CharCard />
-          {/* {this.state.clickedOn ? <p>Already been clicked on</p> : null} */}
+          
           {this.state.images.map(image => (
-            <div key={image.id} onClick={() => this.checkImage(image.id)}>
-              <img src={image.image} alt="" />
-            </div>
+            <CharCard key={image.id} handleClick={() => this.checkImage(image.id)} image={image}/>
           ))}
+
         </Wrapper>
 
       
