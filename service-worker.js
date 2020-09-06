@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/18-click-game/precache-manifest.7b1ada6fced2cb2f14ceab3e4ac8e3bd.js"
+  "/18-click-game/precache-manifest.2158f1aa8a99ca8c459f5a7fd72766e8.js"
 );
 
 self.addEventListener('message', (event) => {
