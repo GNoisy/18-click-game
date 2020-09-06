@@ -1,10 +1,10 @@
 # 18-click-game
 
-This project required using React to build a memory game. 
+This project required using React to build a memory game application. 
 
 ## Deployed Link
 
-* [See Live Site]()
+* [See Live Site](https://gnoisy.github.io/18-click-game/)
 
 ## Prerequisites
 
